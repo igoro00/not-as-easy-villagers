@@ -22,7 +22,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see http://www.gnu.org/licenses/.
 */
 
-//Most of the source code was taken from the Kibe mod (https://github.com/lucaargolo/kibe)
+//Most of the code here was taken from the Kibe mod (https://github.com/lucaargolo/kibe)
 
 package igoro00.not_as_easy_villagers
 
