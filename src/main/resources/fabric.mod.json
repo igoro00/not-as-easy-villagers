@@ -1,29 +1,32 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "not-as-easy-villagers",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Not As Easy Villagers",
+  "description": "Less cheaty Easy Villagers rewrite in Fabric",
   "authors": [
-    "Me!"
+    "igoro00"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/igoro00/not-as-easy-villagers"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GNU GPL v3.0",
+  "icon": "assets/not_as_easy_villagers/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      {
+        "adapter": "kotlin",
+        "value": "igoro00.not_as_easy_villagers.NotAsEasyVillagers"
+      }
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "not_as_easy_villagers.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.8.7",
@@ -32,6 +35,5 @@
     "minecraft": "1.18.x"
   },
   "suggests": {
-    "flamingo": "*"
   }
 }

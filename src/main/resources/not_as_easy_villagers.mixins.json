@@ -1,11 +1,12 @@
 {
   "required": true,
-  "package": "net.fabricmc.example.mixin",
+  "package": "igoro00.not_as_easy_villagers.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MobEntityMixin"
   ],
   "client": [
-    "ExampleMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1
