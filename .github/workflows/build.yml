@@ -2,9 +2,8 @@ name: Gradle build
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -21,7 +20,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - uses: actions/upload-artifact@v2
+    - name: Release
+      uses: softprops/action-gh-release@v1
       with:
-        name: Artifact
-        path: /home/runner/work/not-as-easy-villagers/not-as-easy-villagers/build/libs/
+        files: /home/runner/work/not-as-easy-villagers/not-as-easy-villagers/build/libs/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
