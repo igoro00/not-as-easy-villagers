@@ -24,4 +24,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: Artifact
-        path: build/lib/
+        path: /home/runner/work/not-as-easy-villagers/not-as-easy-villagers/build/libs/
