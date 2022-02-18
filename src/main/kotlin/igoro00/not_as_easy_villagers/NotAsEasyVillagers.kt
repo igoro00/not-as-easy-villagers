@@ -9,7 +9,7 @@ class NotAsEasyVillagers : ModInitializer {
     val MOD_ID="not_as_easy_villagers";
 
     override fun onInitialize() {
-        val SLAVE = Registry.register(Registry.ITEM,Identifier(MOD_ID, "villager"),  VillagerItem(FabricItemSettings().maxCount(1)))
+        Registry.register(Registry.ITEM,Identifier(MOD_ID, "villager"),  VillagerItem(FabricItemSettings().maxCount(1)))
 
 
         println("Not As Easy Villagers loaded.");
