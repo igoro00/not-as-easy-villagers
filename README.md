@@ -13,9 +13,8 @@
   </a>
 </p>
 <p align="center">
+  <a href="https://github.com/igoro00/not-as-easy-villagers/actions"><img src="https://github.com/igoro00/not-as-easy-villagers/actions/workflows/build.yml/badge.svg"/></a>
   <a href="https://opensource.org/licenses/GPL-3.0"><img src="https://img.shields.io/badge/License-GPL%203.0-brightgreen.svg"></a>
-    <a href="https://www.curseforge.com/minecraft/mc-mods/kibe"><img src="http://cf.way2muchnoise.eu/versions/kibe_latest.svg"></a>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/kibe"><img src="http://cf.way2muchnoise.eu/kibe.svg"></a>
 </p>
 
 ## Features
