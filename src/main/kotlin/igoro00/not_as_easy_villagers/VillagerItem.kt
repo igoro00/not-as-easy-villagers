@@ -34,9 +34,7 @@ import net.minecraft.item.ItemStack
 import net.minecraft.item.ItemUsageContext
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.server.world.ServerWorld
-import net.minecraft.text.LiteralText
 import net.minecraft.text.Text
-import net.minecraft.text.TranslatableText
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Formatting
 import net.minecraft.util.math.Direction
@@ -73,7 +71,7 @@ class VillagerItem(settings: Settings): Item(settings) {
                 val newEntity = EntityType.loadEntityWithPassengers(newTag, context.world) {
                     it.refreshPositionAndAngles(targetPos.x+.5, targetPos.y+.0, targetPos.z+.5, it.yaw, it.pitch)
                     if (!(context.world as ServerWorld).tryLoadEntity(it)) {
-                        context.player?.sendMessage(TranslatableText("chat.not_as_easy_villagers.cannot_spawn"), true)
+                        context.player?.sendMessage(Text.translatable("chat.not_as_easy_villagers.cannot_spawn"), true)
                         null
                     }
                     else it
@@ -94,12 +92,12 @@ class VillagerItem(settings: Settings): Item(settings) {
         val level = nbt.getCompound("Entity").getCompound("VillagerData").getInt("level")
         if(nbt.contains("Entity")) {
             nbt["Entity"]
-            //ToDo: Change to TranslatableText and lang files if you want this mod to support multiple languages
+            //ToDo: Change to Text.translatable and lang files if you want this mod to support multiple languages
             if(!Screen.hasShiftDown()){
-                tooltip.add(LiteralText("Press").append(LiteralText(" [SHIFT] ").formatted(Formatting.YELLOW)).append("to show more details."));
+                tooltip.add(Text.literal("Press").append(Text.literal(" [SHIFT] ").formatted(Formatting.YELLOW)).append("to show more details."));
             } else {
-                tooltip.add(LiteralText("Profession: ").append(TranslatableText("entity.minecraft.villager."+profession.split(":")[1])))
-                tooltip.add(LiteralText("Level: ").append(LiteralText(level.toString())))
+                tooltip.add(Text.literal("Profession: ").append(Text.translatable("entity.minecraft.villager."+profession.split(":")[1])))
+                tooltip.add(Text.literal("Level: ").append(Text.literal(level.toString())))
             }
         }
         super.appendTooltip(stack, world, tooltip, context)
