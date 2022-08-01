@@ -34,8 +34,8 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.text.LiteralText;
+import net.minecraft.nbt.NbtCompound;;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
@@ -78,7 +78,7 @@ public class MobEntityMixin {
                 if(tag.contains("CustomName")){
                     Gson gson = new Gson();
                     CustomName name = gson.fromJson(tag.getString("CustomName"), CustomName.class);
-                    villagerItemStack.setCustomName(new LiteralText(name.text));
+                    villagerItemStack.setCustomName(Text.literal(name.text));
                 }
                 villagerItemStack.setNbt(villagerItemNbt);
 
